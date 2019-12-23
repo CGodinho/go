@@ -75,4 +75,14 @@ func main() {
 	aRune := 'G'
 	fmt.Printf("Rune 1: %c; Unicode: %U; Type: %s\n", aRune, aRune, reflect.TypeOf(aRune))
 
+	// a iota use with initialization and a skip value
+	const (
+		C1 = iota + 1
+		_
+		C3
+		C4
+	)
+	// returns "1 3 4"
+	fmt.Println(C1, C3, C4)
+
 }
